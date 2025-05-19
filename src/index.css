@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-900 bg-gray-50;
+  }
+
+  body {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .table-container {
+    @apply overflow-x-auto relative rounded-lg shadow-md;
+  }
+
+  .portfolio-table {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+
+  .table-header {
+    @apply bg-gray-100;
+  }
+
+  .table-header th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .table-body {
+    @apply bg-white divide-y divide-gray-200;
+  }
+
+  .table-row {
+    @apply hover:bg-gray-50 transition-colors duration-150;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm;
+  }
+
+  .sector-card {
+    @apply bg-white rounded-lg shadow-md p-6 mb-6;
+  }
+
+  .sector-header {
+    @apply text-xl font-semibold mb-4 flex items-center justify-between;
+  }
+
+  .sector-summary {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-sm;
+  }
+
+  .summary-item {
+    @apply flex flex-col p-3 rounded-md;
+  }
+
+  .profit {
+    @apply text-accent-600;
+  }
+
+  .loss {
+    @apply text-danger-500;
+  }
+
+  .animated-bg {
+    background: linear-gradient(90deg, rgba(249,250,251,1) 0%, rgba(243,244,246,1) 50%, rgba(249,250,251,1) 100%);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .skeleton {
+    @apply bg-gray-200 animate-pulse-slow rounded;
+  }
+}
